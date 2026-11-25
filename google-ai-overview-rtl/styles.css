@@ -1,0 +1,23 @@
+/* Only affects text and lists detected inside the Google AI Overview card. */
+[data-gai-rtl-root="1"] [data-gai-rtl-text="1"] {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: isolate !important;
+}
+
+/* Google keeps list layout on the UL/OL wrapper, so fixing LI alone is insufficient. */
+[data-gai-rtl-root="1"] [data-gai-rtl-list="1"] {
+  direction: rtl !important;
+  text-align: right !important;
+  padding-inline-start: 0 !important;
+  padding-inline-end: 1.5em !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+
+/* Keep Latin links and technical tokens readable inside Persian paragraphs. */
+[data-gai-rtl-root="1"] [data-gai-rtl-text="1"] a,
+[data-gai-rtl-root="1"] [data-gai-rtl-text="1"] code,
+[data-gai-rtl-root="1"] [data-gai-rtl-text="1"] .font-mono {
+  unicode-bidi: isolate;
+}

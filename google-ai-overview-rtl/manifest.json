@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Google AI Overview RTL Fix",
+  "version": "1.1.0",
+  "description": "Fixes Persian and Arabic text direction, alignment, and list layout inside Google AI Overviews.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://google.com/*",
+        "https://www.google.com/*",
+        "https://*.google.com/*",
+        "https://google.ca/*",
+        "https://www.google.ca/*",
+        "https://*.google.ca/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
